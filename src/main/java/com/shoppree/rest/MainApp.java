@@ -41,8 +41,10 @@ public class MainApp {
 			
 			ShoppreeJDBCTemplate shoppreeJDBCTemplate = (ShoppreeJDBCTemplate) context.getBean("shoppreeJDBCTemplate");
 
+			System.out.println("--------------------------------------");
 			System.out.println("------Listing Multiple Records--------");
-
+			System.out.println("--------------------------------------");
+			
 			List<PointsBean> pointList = shoppreeJDBCTemplate.getPointsByCartAmount("10");
 			for (PointsBean record : pointList) {
 				System.out.println(record.getCurrency());
